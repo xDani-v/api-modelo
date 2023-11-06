@@ -5,3 +5,4 @@ Pillow
 fastapi 
 tensorboard 
 protobuf 
+flask_cors
