@@ -10,12 +10,21 @@ from PIL import Image
 from io import BytesIO
 import base64
 import io
+import subprocess
+
+try:
+    subprocess.run(['bash', "./script.sh"], check=True)
+    print("El script de Bash se ejecutó correctamente.")
+except subprocess.CalledProcessError as e:
+    print(f"Error al ejecutar el script de Bash: {e}")
+except FileNotFoundError:
+    print(f"El archivo del script de Bash no se encontró en la ruta especificada.")
 
 app = Flask(__name__)
 CORS(app) 
 
 # Carga el modelo de modelo50
-model = tf.keras.models.load_model('skin.h5')
+model = tf.keras.models.load_model('./models/skin.h5')
  
  #clases agrgg
 class_names =['Candidiasis','Eczema','Acne','pigmentacion','benigno','maligno']

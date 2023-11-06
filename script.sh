@@ -10,7 +10,7 @@ file_name="skin.h5"
 download_url="https://drive.google.com/uc?id=18PhaN6hAVeEfTX-onAsSYOCD4YuTCWGX&export=download&confirm=t&uuid=f98c6d1b-a041-4c96-8c07-785bb09da383"
 
 # Directorio de destino donde se guardará el archivo
-destination_directory="./models"
+destination_directory="./models/"
 
 # Descarga el archivo desde Google Drive usando curl
 echo "Descargando archivo desde Google Drive..."
